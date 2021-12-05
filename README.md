@@ -1,25 +1,22 @@
-# World of Final Fantasy XP Auto-Grinder
+# Pokemon Brilliant Diamond Shiny Starter Hunter
 
-A fork of a fork of a fork, modified to grind XP in a specific location in World of Final Fantasy, to level my character past level 60, so I can max out a few things in the game.
-
-See previous projects for some more detailed information / setup process.
+Automatically soft resets for a starter Pokemon, using an Arduino UNO R3 to emulate a controller.
 
 ---
 
 LUFA has been included as a git submodule, so cloning the repo like this:
 
 ```
-git clone --recursive git@github.com:bertrandom/snowball-thrower.git
+git clone --recursive https://github.com/r1008/shiny-hunting.git
 ```
 
 will put LUFA in the right directory.
 
-Now you should be ready to rock. Open a terminal window in the `snowball-thrower` directory, type `make`, and hit enter to compile. If all goes well, the printout in the terminal will let you know it finished the build! Follow the directions on flashing `Joystick.hex` onto your Teensy, which can be found page where you downloaded the Teensy Loader application.
+1. In the `shiny-hunting` directory, type `make` to compile.
 
-#### Thanks
+2. Flash `Joystick.hex` onto your Arduino UNO R3. Instructions on how to do this can be found here: https://www.arduino.cc/en/Hacking/DFUProgramming8U2
 
-Thanks to https://github.com/bertrandom/snowball-thrower for the updated information which modifies the original script to throw snowballs in Zelda. This C Source is much easier to start from, and has a nice object interface for creating new command sequences.
+#### Notes
 
-Thanks to Shiny Quagsire for his [Splatoon post printer](https://github.com/shinyquagsire23/Switch-Fightstick) and progmem for his [original discovery](https://github.com/progmem/Switch-Fightstick).
-
-Thanks to [exsilium](https://github.com/bertrandom/snowball-thrower/pull/1) for improving the command structure, optimizing the waiting times, and handling the failure scenarios. It can now run indefinitely!
+- The steps begin from the controller - change Grip/Order page
+- After the battle begins, there is a ~10s pause for the home button to be manually triggered
