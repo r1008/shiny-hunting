@@ -48,205 +48,163 @@ typedef struct {
 } command; 
 
 static const command step[] = {
-	// Setup controller
-	{ NOTHING,  250 },
-	{ TRIGGERS,   5 },
-	{ NOTHING,  100 },
-	{ TRIGGERS,   5 },
-	{ NOTHING,  100 },
-	{ A,          5 },
 	{ NOTHING,   50 },
 
-	// Save
+	// Setup controller
+	{ TRIGGERS,   5 },
+	{ NOTHING,  10 },
+	{ TRIGGERS,   5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,   30 },
+
+	// Close controller screen
+	{ B,      5 },
+	{ NOTHING,   30 },
+
+	// Open pokemon
+	{ UP,         10 },
+	{ NOTHING,   30 },
+
+	{ LEFT,     5 },
+	{ NOTHING,   30 },
+
+	{ LEFT,     5 },
+	{ NOTHING,   30 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+
+	// *** Start of the loop ***
+
+	// Loading screen
+	{ NOTHING,  1050 },
+
 	{ A,          5 },
 	{ NOTHING,  100 },
+
 	{ A,          5 },
-	{ NOTHING,  120 },
+	{ NOTHING,  450 },
+
+	// Enter lake
+	{ UP,          15 },
+	{ NOTHING,  50 },
+
+	// Rival says something
 	{ A,          5 },
 
-	// Walk to the girl
+	// Loading screen
+	{ NOTHING,  215 },
 
-	// Walk left
-	{ LEFT,     135 },
-	{ NOTHING,   25 },
-
-	// Walk down
-	{ DOWN,      44 },
-	{ NOTHING,   25 },
-
-	// Talk to her
+	// Rowan and Lucas talk
 	{ A,          5 },
-	{ NOTHING,  200 },
+	{ NOTHING,  70 },
+
 	{ A,          5 },
-	{ NOTHING,  200 },
-
-	// Up 4 times when arrive at menu
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// After the extra quest is unlocked, it's 5
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// After the extra quest is unlocked, it's 6
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// In the Post-game, it's 8
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// Press A to take item
-	{ A,          5 },
-	{ NOTHING,   20 },
-	{ A,          5 },
-	{ NOTHING,   20 },
-
-	// Enter Quest
-	{ A,          5 },
-	{ NOTHING,   20 },
-	{ A,          5 },
-	{ NOTHING,   20 },
-
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-
-	// Skip scene
-
-	// Press Plus
-	{ PLUS,       5 },
-	{ NOTHING,   30 },
-	// Press X
-	{ X,          5 },
-	{ NOTHING,   30 },
-	// Press up
-	{ UP,        5 },
 	{ NOTHING,  30 },
-	// Press A
-	{ A,          5 },
-	{ NOTHING,   30 },
 
-	// Wait a while
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  85 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  50 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+
+	// Rowan leaves
+	{ NOTHING,  220 },
+	{ A,          5 },
+
+	// Lucas leaves
+	{ NOTHING,  160 },
+	{ A,          5 },
+
+	// Rival speaks
+	{ NOTHING,  180 },
+
+	{ A,          5 },
+	{ NOTHING,  160 },
+
+	{ A,          5 },
+	{ NOTHING,  40 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  50 },
+
+	{ A,          5 },
+
+	// Walk to suitcase
 	{ NOTHING,  200 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	{ A,          5 },
+	{ NOTHING,  30 },
+
+	// Starly attack
 	{ NOTHING,  130 },
 
-	// Fast forward a little
-	{ R,         50 },
-	{ NOTHING,   15 },
-
-	// Set up thunder & fire spells
-
-	// First spell
-
-	// L
-	{ L,          5 },
-	{ NOTHING,   15 },
-	// Down
-	{ DOWN,       5 },
-	{ NOTHING,   15 },
-	// A
 	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
+	{ NOTHING,  50 },
+
 	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
+
+	// Suitcase opens
+	{ NOTHING,  220 },
 	{ A,          5 },
-	{ NOTHING,   20 },
+	{ NOTHING,  30 },
 
-	// Wait
-	{ NOTHING,   10 },
+	// Choose chimchar
+	{ RIGHT,          5 },
+	{ NOTHING,  30 },
 
-	// Second spell
-
-	// L
-	{ L,          5 },
-	{ NOTHING,   15 },
-	// Down
-	{ DOWN,       5 },
-	{ NOTHING,   15 },
-	// A
 	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
+	{ NOTHING,  50 },
+
+	{ UP,          5 },
+	{ NOTHING,  30 },
+
 	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   10 },
 
-	// Auto battle
+	// Wait for the battle to start
+	{ NOTHING,  1000 },
 
-	// Press minus
-	{ MINUS,      5 },
-	{ NOTHING,   10 },
-
-	// Hold R for a while
-	{ R,        500 },
-	{ R,        500 },
-	{ R,        380 },
-
-	// If level 50-70, you might need more time in battle
-	// { R,        500 },
-	// { R,        500 },
-	// { R,        500 },
-
-	// Proceed past battle
-
-	// Press A
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
-
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-	{ NOTHING,  100 },
-
-	// Skip scene
-
-	// Press Plus
-	{ PLUS,       5 },
-	{ NOTHING,   15 },
-	// Press X
+	// Close and then reopen game
 	{ X,          5 },
-	{ NOTHING,   15 },
-	// Press up
-	{ UP,         5 },
-	{ NOTHING,   15 },
-	// Press A
+	{ NOTHING,  30 },
+
 	{ A,          5 },
-	{ NOTHING,   20 },
+	{ NOTHING,  30 },
 
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-	{ NOTHING,  90 },
+	{ A,          5 },
+	{ NOTHING,  30 },
 
-	// Go back to save point
-	// up
-	{ UP,        26 },
-	{ NOTHING,   50 },
-	// left
-	{ LEFT,       3 },
-	{ NOTHING,   50 },
-
-	// Wait before looping
-	// { NOTHING,   50 },
+	{ A,          5 },
 };
 
 // Main entry point.
@@ -511,7 +469,7 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 
 				// state = CLEANUP;
 
-				bufindex = 7;
+				bufindex = 18;
 				duration_count = 0;
 
 				state = BREATHE;
